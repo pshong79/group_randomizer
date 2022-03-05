@@ -1,12 +1,10 @@
 import random
 
-def select_random_student(some_list):
+def select_random_student(some_list, number_of_students_in_each_group):
   group = []
-  # if you want groups of four, change the next line to a 4 and so on...
-  group_size = 3
   count = 0
 
-  while count < group_size:
+  while count < number_of_students_in_each_group:
     if (len(some_list) > 0):
       student = random.choice(some_list)
       group.append(student)

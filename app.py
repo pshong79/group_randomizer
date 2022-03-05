@@ -15,8 +15,12 @@ class_list = [
 student_groups = []
 team_number = 1
 
+#if you want groups of four, change the next line to a 4 and so on...
+students_per_group = 3
+
+
 while (len(class_list) > 0):
-  student_groups = select_random_student(class_list)
+  student_groups = select_random_student(class_list, students_per_group)
   # Python3
   print(f'team {team_number}: {student_groups}')
   # Python2
