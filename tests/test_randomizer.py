@@ -5,6 +5,7 @@ sys.path.insert(0, 'methods')
 from randomizer import select_random_student
 
 import pytest
+import copy
 
 @pytest.fixture
 def empty_list():

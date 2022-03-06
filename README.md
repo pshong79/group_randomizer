@@ -10,3 +10,11 @@ To run the program, in console, use the command:
 ```python
 $ python app.py
 ```
+
+
+## To Run Tests:
+To run the tests, in console, in the root directory, use the command:
+```python
+$ pytest <path_to_directory_or_file> -v
+```
+The `-v` is optional and provides more information from the test run.
