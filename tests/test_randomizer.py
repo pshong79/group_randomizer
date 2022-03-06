@@ -20,8 +20,12 @@ def test_select_random_student(empty_list):
 
 # use case : create groups of 3
 def test_select__random_student(list_of_students):
-  returned_groups = select_random_student(list_of_students, 3)
-  print(returned_groups)
-  assert len(returned_groups) == 3
-  # TODO: Figure out how to verify groups of three
-
+  original_student_list = copy.deepcopy(list_of_students)
+  returned_group = select_random_student(list_of_students, 3)
+  
+  # asserts the length of returned list has 3 students
+  assert len(returned_group) == 3
+  # asserts all the students in the returned_group exist in the original_student_list
+  assert all(student in original_student_list for student in returned_group)
+  # asserts the returned_group students + the remaining students in list_of_students make up the entire original_student_list
+  assert sorted(original_student_list) == sorted(returned_group + list_of_students)
